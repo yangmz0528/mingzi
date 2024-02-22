@@ -23,7 +23,7 @@ serverless
 ```sh 
 npm install serverless
 ```
-7. Install serverless offline
+7. Install serverless offline and add .gitignore for node_modules
 ```sh
 npm install serverless-offline --save-dev
 ```
