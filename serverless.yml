@@ -5,7 +5,7 @@ provider:
   name: aws
   runtime: nodejs18.x
 
-function:
+functions:
   api:
     handler: index.handler
     event:
