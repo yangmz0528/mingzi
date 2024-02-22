@@ -1,0 +1,11 @@
+{
+  "name": "sls-22feb",
+  "version": "1.0.0",
+  "description": "1. Install serverless\r ```sh \r npm install -g serverless\r ```\r 2. Check installation\r ```sh \r serverless -v\r sls -v\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
