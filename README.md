@@ -27,3 +27,9 @@ npm install serverless
 ```sh
 npm install serverless-offline --save-dev
 ```
+8. Run serverless deploy
+9. Unit Testing
+- run `npm install jest --save-dev`
+- run `npm test` or `jest`
+10. run npm remove 
+- removing resources created on AWS
