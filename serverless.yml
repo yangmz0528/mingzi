@@ -1,18 +1,18 @@
-service: sls-22-feb
+service: sls-22-feb-mingzi
 frameworkVersion: '3'
 
 provider:
   name: aws
   runtime: nodejs18.x
+  region: ap-southeast-1
 
 functions:
   api:
     handler: index.handler
-    event:
+    events:
     - httpApi:
         path: /
         method: get
 
 plugins:
 - serverless-offline
-
