@@ -36,6 +36,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+    - name: Install AWS CLI
+      run: |
+        apt-get update && apt-get install -y awscli
+    - name: Configure AWS Credentials
+      run: |
+        aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws configure set default.region ap-southeast-1
     - name: serverless deploy
       uses: serverless/github-action@v3.2
       with:
@@ -46,5 +54,5 @@ jobs:
     - name: store information using Secret Manager on AWS 
       run: |
         aws secretsmanager create-secret --name mingzi-test-secret1 --secret-string '{"username":"1234"}'
-        aws secretsmanager get-secret-value —secret-id <secret name>
+        aws secretsmanager get-secret-value —secret-id mingzi-test-secret1
         echo "Secret ID: $secret_id"
