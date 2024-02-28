@@ -53,3 +53,5 @@ jobs:
       run: |
        aws secretsmanager create-secret --name ${{ secrets.SECRET_ID }} --secret-string '${{ secrets.SECRET_STRING }}'
        aws secretsmanager get-secret-value --secret-id ${{ secrets.SECRET_ID }}
+
+ #      
