@@ -52,4 +52,4 @@ jobs:
     - name: Store secret in AWS Secrets Manager
       run: |
        aws secretsmanager create-secret --name ${{ secrets.SECRET_ID }} --secret-string '${{ secrets.SECRET_STRING }}'
-       echo aws secretsmanager get-secret-value --secret-id ${{ secrets.SECRET_ID }}
+       aws secretsmanager get-secret-value --secret-id ${{ secrets.SECRET_ID }}
